@@ -1,0 +1,53 @@
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const webpack = require('webpack')
+
+module.exports = {
+  entry: {
+    index: path.resolve(__dirname, 'src/index.js'),
+  },
+  mode: 'development',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/[name].js',
+  },
+
+  devServer: {
+    hot: true,
+    open: true,
+    port: 3000,
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: { loader: 'babel-loader' },
+        exclude: '/node_modules/',
+      },
+
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.jpg|png|gif|svg|woff|eot|ttf|mp4|webm$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            outputPath: 'assets/',
+          },
+        },
+      },
+    ],
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, 'public/index.html'),
+    }),
+  ],
+}
