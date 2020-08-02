@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import useDate from '../../hooks/useDate'
-import ListOfGames from '../ListOfGames'
+import ListOfSchedulesGames from '../ListOfSchedulesGames'
 import moment from 'moment'
 
 export default function ScoreBoard() {
@@ -12,11 +12,11 @@ export default function ScoreBoard() {
     <>
       <button onClick={() => setDate(-1, 'days')}> -1</button>
       <div>
-        <span>{weekDay}</span>
+        <div>{weekDay}</div>
         <div>{moth}</div>
       </div>
       <button onClick={() => setDate(1, 'days')}>+1</button>
-      <ListOfGames date={date} />
+      <ListOfSchedulesGames date={date} />
     </>
   )
 }
