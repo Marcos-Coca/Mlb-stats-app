@@ -5,6 +5,7 @@ import moment from 'moment'
 
 export default function ScoreBoard() {
   const [date, setDate] = useDate({})
+  const currentDate = moment(date).format('YYYY-MMM-D')
   const weekDay = moment(date).format('dddd')
   const moth = moment(date).format('MMM-DD')
 
@@ -16,7 +17,7 @@ export default function ScoreBoard() {
         <div>{moth}</div>
       </div>
       <button onClick={() => setDate(1, 'days')}>+1</button>
-      <ListOfSchedulesGames date={date} />
+      <ListOfSchedulesGames date={currentDate} />
     </>
   )
 }

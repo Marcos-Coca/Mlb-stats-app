@@ -1,16 +1,20 @@
-import { useMemo, useEffect } from 'react'
+import { useEffect, useRef } from 'react'
+import useDate from './useDate'
+import anyGameInProgress from '../services/anyGameInProgress'
+import useGames from './useGames'
 
 export default function useLiveGames() {
-  const today = useMemo(() => date, [])
-  const [games, setGames] = useState([])
+  const [today] = useDate({ dateFormat: 'YYYY-MMM-D' })
+  const { schedulesGames, searchGames } = useGames(today)
+  const interval = useRef(false)
 
-  function setGamesStatus() {
-    return getSchedulesGames(today).then(setGames)
-  }
   useEffect(() => {
-    const interval = setInterval(setGamesStatus, 10000 * 60 * 3)
-    return () => clearInterval(interval)
+    anyGameInProgress().then(
+      isPlaying =>
+        isPlaying && (interval.current = setInterval(searchGames, 1000 * 5))
+    )
+    return () => clearInterval(interval.current)
   }, [])
 
-  return { games }
+  return { livesGames: schedulesGames, today }
 }
