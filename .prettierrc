@@ -3,5 +3,5 @@
   "bracketSpacing": true,
   "singleQuote": true,
   "arrowParens": "avoid",
-  "prettier.printWidth": 140
+  "prettier.printWidth": 120
 }

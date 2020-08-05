@@ -1,32 +1,26 @@
 import React, { useEffect, useState } from 'react'
 import moment from 'moment'
+import DateCard from '../DateCard'
 
 export default function DateLists({ date, requiredDates, setDate }) {
-  const [maxDate, setMaxDate] = useState(date)
   const [dates, setDates] = useState([])
-
-  useEffect(() => {
-    setMaxDate(moment(date).add(Math.floor(requiredDates / 2), 'days'))
-  }, [date])
 
   useEffect(() => {
     setDates([])
 
+    const maxDate = Math.floor(requiredDates / 2)
     for (let i = 0; i <= requiredDates; i++) {
-      const newDate = moment(maxDate).subtract(i, 'days')
-      setDates(otherDates =>
-        otherDates.concat({
-          month: newDate.format('MMM-DD'),
-          weekDay: newDate.format('dddd'),
-        })
-      )
+      const currentDate = moment(date).subtract(i - maxDate, 'days')
+      setDates(otherDates => otherDates.concat(currentDate))
     }
-  }, [maxDate])
+  }, [date])
 
-  return dates.map(currenDate => (
-    <div key={currenDate.month}>
-      <div>Día {currenDate.weekDay}</div>
-      <div>Mes {currenDate.month}</div>
-    </div>
+  return dates.map(currentDate => (
+    <DateCard
+      key={currentDate}
+      date={currentDate}
+      active={moment(date).isSame(moment(currentDate))}
+      setDate={setDate}
+    />
   ))
 }

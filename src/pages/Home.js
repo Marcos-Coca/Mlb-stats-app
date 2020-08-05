@@ -1,13 +1,10 @@
 import React from 'react'
-import ScoreBoard from '../components/MiniScoreBoard'
-import ListOfSchedulesGames from '../components/ListOfSchedulesGames'
-import moment from 'moment'
+import MiniScoreBoard from '../components/MiniScoreBoard'
 
 export default function Home() {
   return (
     <>
-      <ScoreBoard />
-      {/* <ListOfSchedulesGames /> */}
+      <MiniScoreBoard visibleDates={3} />
     </>
   )
 }

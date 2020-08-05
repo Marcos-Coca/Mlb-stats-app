@@ -3,14 +3,12 @@ import useDate from '../../hooks/useDate'
 import ListOfSchedulesGames from '../ListOfSchedulesGames'
 import DatesList from '../DatesList'
 
-export default function ScoreBoard({ visibleDays = 3 }) {
+export default function MinicoreBoard({ visibleDates }) {
   const [date, setDate] = useDate({})
   const [currentDate, setCurrentDate] = useDate({
     initialDate: date,
     dateFormat: 'YYYY-MMM-D',
   })
-  // const weekDay = moment(date).format('dddd')
-  // const moth = moment(date).format('MMM-DD')
 
   useEffect(() => {
     setCurrentDate({ especificDate: date })
@@ -18,15 +16,10 @@ export default function ScoreBoard({ visibleDays = 3 }) {
 
   return (
     <>
-      {/* <div>
-        <div>{weekDay}</div>
-        <div>{moth}</div>
-      </div> */}
-      <DatesList date={date} requiredDates={6} />
-
+      <DatesList date={date} requiredDates={visibleDates} setDate={setDate} />
       <button onClick={() => setDate({ number: -1, time: 'days' })}> -1</button>
       <button onClick={() => setDate({ number: 1, time: 'days' })}>+1</button>
-      {/* <ListOfSchedulesGames date={currentDate} /> */}
+      <ListOfSchedulesGames date={currentDate} />
     </>
   )
 }

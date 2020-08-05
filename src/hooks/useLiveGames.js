@@ -11,7 +11,8 @@ export default function useLiveGames() {
   useEffect(() => {
     anyGameInProgress().then(
       isPlaying =>
-        isPlaying && (interval.current = setInterval(searchGames, 1000 * 5))
+        isPlaying &&
+        (interval.current = setInterval(searchGames, 1000 * 60 * 3))
     )
     return () => clearInterval(interval.current)
   }, [])

@@ -6,7 +6,7 @@ export default function useDate({ initialDate = moment(), dateFormat }) {
 
   const changeDate = ({ number, time, especificDate }) => {
     if (especificDate) {
-      setDate(moment(especificDate).format(dateFormat))
+      return setDate(moment(especificDate).format(dateFormat))
     }
     const newDate = moment(date, dateFormat).add(number, time)
     return setDate(moment(newDate).format(dateFormat))

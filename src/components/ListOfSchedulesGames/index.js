@@ -7,6 +7,7 @@ import useGames from '../../hooks/useGames'
 function getTeamsGameInfo(teams, game) {
   const homeTeam = teams.find(team => team.TeamID === game.HomeTeamID)
   const awayTeam = teams.find(team => team.TeamID === game.AwayTeamID)
+
   return [homeTeam, awayTeam]
 }
 
@@ -30,7 +31,7 @@ export default function ({ date }) {
         <ScheduleGame
           liveGames={today === date && liveGames}
           teams={getTeamsGameInfo(teams, game)}
-          game={schedulesGames}
+          game={game}
           key={game.GameID}
         />
       )
