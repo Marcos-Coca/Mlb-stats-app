@@ -9,11 +9,13 @@ export default function useLiveGames() {
   const interval = useRef(false)
 
   useEffect(() => {
-    anyGameInProgress().then(
-      isPlaying =>
-        isPlaying &&
-        (interval.current = setInterval(searchGames, 1000 * 60 * 3))
-    )
+    anyGameInProgress()
+      .then(
+        isPlaying =>
+          isPlaying &&
+          (interval.current = setInterval(searchGames, 1000 * 60 * 3))
+      )
+      .catch(err => console.log(err))
     return () => clearInterval(interval.current)
   }, [])
 

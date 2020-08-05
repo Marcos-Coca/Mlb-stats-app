@@ -18,10 +18,10 @@ export default function useGames(date) {
     try {
       const schedulesGames = await getSchedulesGames(date)
       setGames(gamesCached => ({ ...gamesCached, [date]: schedulesGames }))
-      setLoading(false)
     } catch {
       setError(true)
     }
+    setLoading(false)
   }
 
   return { schedulesGames: games[date] || [], searchGames, loading, error }

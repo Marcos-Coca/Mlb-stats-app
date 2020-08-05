@@ -8,13 +8,16 @@ function getTeamsGameInfo(teams, game) {
   const homeTeam = teams.find(team => team.TeamID === game.HomeTeamID)
   const awayTeam = teams.find(team => team.TeamID === game.AwayTeamID)
 
-  return [homeTeam, awayTeam]
+  return [
+    { ...homeTeam, runs: game.HomeTeamRuns },
+    { ...awayTeam, runs: game.HomeTeamRuns },
+  ]
 }
 
 export default function ({ date }) {
   const [teams, setTeams] = useState(false)
   const { schedulesGames, loading, error } = useGames(date)
-  const { liveGames, today } = useLiveGames()
+  useLiveGames()
 
   useEffect(function () {
     getTeams().then(setTeams)
@@ -29,7 +32,6 @@ export default function ({ date }) {
     game =>
       teams && (
         <ScheduleGame
-          liveGames={today === date && liveGames}
           teams={getTeamsGameInfo(teams, game)}
           game={game}
           key={game.GameID}

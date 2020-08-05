@@ -1,12 +1,20 @@
 import React from 'react'
-import TeamVsInfo from '../TeamVsInfo'
+import TeamInfo from '../TeamInfo'
+import GameProgress from '../GameProgress'
 
 export default function ScheduleGame({ liveGames, teams, game }) {
-  console.log(game)
   return (
     <div>
-      {teams && teams.map(team => <TeamVsInfo key={team.TeamID} {...team} />)}
-
+      {teams &&
+        teams.map(team => (
+          <TeamInfo
+            key={team.TeamID}
+            image={team.WikipediaWordMarkUrl}
+            Name={team.Name}
+            runs={team.runs}
+          />
+        ))}
+      <GameProgress game={game} />
       <br />
     </div>
   )
