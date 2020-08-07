@@ -16,8 +16,10 @@
     "moment": "^2.27.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-responsive": "^8.1.0",
     "react-router": "^5.2.0",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -26,6 +28,7 @@
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
+    "babel-plugin-styled-components": "^1.11.1",
     "css-loader": "^4.1.1",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",

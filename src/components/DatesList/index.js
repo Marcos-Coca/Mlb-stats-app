@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import moment from 'moment'
 import DateCard from '../DateCard'
+import { Container } from './styles'
 
 export default function DateLists({ date, requiredDates, setDate }) {
   const [dates, setDates] = useState([])
@@ -15,12 +16,16 @@ export default function DateLists({ date, requiredDates, setDate }) {
     }
   }, [date])
 
-  return dates.map(currentDate => (
-    <DateCard
-      key={currentDate}
-      date={currentDate}
-      active={moment(date).isSame(moment(currentDate))}
-      setDate={setDate}
-    />
-  ))
+  return (
+    <Container>
+      {dates.map(currentDate => (
+        <DateCard
+          key={currentDate}
+          date={currentDate}
+          active={moment(date).isSame(moment(currentDate))}
+          setDate={setDate}
+        />
+      ))}
+    </Container>
+  )
 }

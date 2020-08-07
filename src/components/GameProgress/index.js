@@ -1,7 +1,8 @@
 import React from 'react'
 import useDate from '../../hooks/useDate'
+import { Container } from './styles'
 
-export default function GameProgress({ game }) {
+export default function GameProgress({ game, breakPoint }) {
   let {
     Status,
     Inning,
@@ -15,33 +16,38 @@ export default function GameProgress({ game }) {
 
   if (Status !== 'InProgress' && Status !== 'Scheduled') {
     return (
-      <div>
+      <Container>
         <div>{Status}</div>
         {Inning && Status !== 'Final' && <div> Inning {Inning}</div>}
-      </div>
+      </Container>
     )
   }
 
   if (Status === 'Scheduled') {
     return (
-      <div>
+      <Container>
         <div>{gameDateTime}</div>
-      </div>
+      </Container>
     )
   }
 
   return (
-    <div>
-      <div>
-        <div className={RunnerOnFirst ? 'active' : ''}></div>
-        <div className={RunnerOnSecond ? 'active' : ''}></div>
-        <div className={RunnerOnThird ? 'active' : ''}></div>
-      </div>
-      <div>
-        <div className={Outs - 1 > 0 ? 'active' : ''}></div>
-        <div className={Outs - 2 > 0 ? 'active' : ''}></div>
-        <div className={Outs - 3 > 0 ? 'active' : ''}></div>
-      </div>
-    </div>
+    <Container>
+      <div>Inning {Inning}</div>
+      {breakPoint && (
+        <>
+          <div>
+            <div className={RunnerOnFirst ? 'active' : ''}></div>
+            <div className={RunnerOnSecond ? 'active' : ''}></div>
+            <div className={RunnerOnThird ? 'active' : ''}></div>
+          </div>
+          <div>
+            <div className={Outs - 1 > 0 ? 'active' : ''}></div>
+            <div className={Outs - 2 > 0 ? 'active' : ''}></div>
+            <div className={Outs - 3 > 0 ? 'active' : ''}></div>
+          </div>
+        </>
+      )}
+    </Container>
   )
 }
