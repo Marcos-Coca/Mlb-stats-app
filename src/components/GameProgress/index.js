@@ -2,7 +2,7 @@ import React from 'react'
 import useDate from '../../hooks/useDate'
 import { Container } from './styles'
 
-export default function GameProgress({ game, breakPoint }) {
+export default function GameProgress({ game, showAll }) {
   let {
     Status,
     Inning,
@@ -34,7 +34,7 @@ export default function GameProgress({ game, breakPoint }) {
   return (
     <Container>
       <div>Inning {Inning}</div>
-      {breakPoint && (
+      {showAll && (
         <>
           <div>
             <div className={RunnerOnFirst ? 'active' : ''}></div>

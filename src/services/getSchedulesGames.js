@@ -1,7 +1,7 @@
-import { API_KEY } from '../utils/apiKey'
+import { API_KEY, API_URL } from '../utils/apiKey'
 
 export default function getSchedulesGames(date) {
-  return fetch(
-    `https://api.sportsdata.io/v3/mlb/scores/json/GamesByDate/${date}?key=${API_KEY}`
-  ).then(data => data.json())
+  return fetch(`${API_URL}/GamesByDate/${date}?key=${API_KEY}`).then(res =>
+    res.json()
+  )
 }

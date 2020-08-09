@@ -9,14 +9,6 @@ import { useMediaQuery } from 'react-responsive'
 export default function MinicoreBoard({ visibleDates }) {
   const [date, setDate] = useDate({})
   const isDesktop = useMediaQuery({ minWidth: 1024 })
-  const [currentDate, setCurrentDate] = useDate({
-    initialDate: date,
-    dateFormat: 'YYYY-MMM-D',
-  })
-
-  useEffect(() => {
-    setCurrentDate({ especificDate: date })
-  }, [date])
 
   return (
     <Container>
@@ -27,7 +19,7 @@ export default function MinicoreBoard({ visibleDates }) {
       <Button onClick={() => setDate({ number: -1, time: 'days' })}> -1</Button>
       <Button onClick={() => setDate({ number: 1, time: 'days' })}>+1</Button>
       <div>
-        <ListOfSchedulesGames date={currentDate} />
+        <ListOfSchedulesGames date={date} />
       </div>
     </Container>
   )

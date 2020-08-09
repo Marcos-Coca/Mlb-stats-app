@@ -1,7 +1,7 @@
-import { API_KEY } from '../utils/apiKey'
+import { API_KEY, API_URL } from '../utils/apiKey'
 
 export default function anyGameInProgress() {
-  return fetch(
-    `https://api.sportsdata.io/v3/mlb/scores/json/AreAnyGamesInProgress?key=${API_KEY}`
-  ).then(res => res.json())
+  return fetch(`${API_URL}/AreAnyGamesInProgress?key=${API_KEY}`).then(res =>
+    res.json()
+  )
 }

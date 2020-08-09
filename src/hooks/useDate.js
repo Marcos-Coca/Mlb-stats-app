@@ -1,7 +1,10 @@
 import { useState } from 'react'
 import moment from 'moment'
 
-export default function useDate({ initialDate = moment(), dateFormat }) {
+export default function useDate({
+  initialDate = moment(),
+  dateFormat = 'YYYY-MM-DD',
+}) {
   const [date, setDate] = useState(() => moment(initialDate).format(dateFormat))
 
   const changeDate = ({ number, time, especificDate }) => {
