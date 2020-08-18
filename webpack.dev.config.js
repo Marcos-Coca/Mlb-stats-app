@@ -12,6 +12,15 @@ module.exports = {
     filename: 'js/[name].js',
   },
 
+  resolve: {
+    alias: {
+      Components: path.resolve(__dirname, 'src/components'),
+      Services: path.resolve(__dirname, 'src/services'),
+      Hooks: path.resolve(__dirname, 'src/Hooks'),
+      Assets: path.resolve(__dirname, 'assets'),
+    },
+  },
+
   devServer: {
     hot: true,
     open: true,

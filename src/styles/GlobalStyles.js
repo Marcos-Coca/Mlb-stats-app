@@ -10,15 +10,16 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: inherit;
   }
 
-  ul, li, h1, h2, h3, p, button { margin: 0; padding: 0; }
+  ul, li, h1, h2, p, button { margin: 0; padding: 0; }
   ul { list-style: none; }
   button { background: transparent; border: 0; outline: 0 }
 
   body {
-    background: #ECECEC;
-    height: 100vh;
-    margin: 0 auto;
-    overscroll-behavior: none;
     width: 100%; 
+    height: 100vh;
+    color: #222222;
+    margin: 0 auto;
+    background: #ECECEC;
+    overscroll-behavior: none;
   }
 `

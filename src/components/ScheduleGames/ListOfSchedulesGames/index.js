@@ -1,7 +1,7 @@
 import React from 'react'
-import ScheduleGame from '../ScheduleGame'
-import useLiveGames from '../../hooks/useLiveGames'
-import useGames from '../../hooks/useGames'
+import ScheduleGame from 'Components/ScheduleGames/ScheduleGame'
+import useLiveGames from 'Hooks/useLiveGames'
+import useGames from 'Hooks/useGames'
 import { List } from './styles'
 
 export default function ({ date }) {

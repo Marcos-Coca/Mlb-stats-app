@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import moment from 'moment'
-import DateCard from '../DateCard'
+import DateCard from 'Components/Dates/DateCard'
 import { Container } from './styles'
 
 export default function DateLists({ date, requiredDates, setDate }) {

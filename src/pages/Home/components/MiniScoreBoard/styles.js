@@ -14,8 +14,3 @@ export const Container = styled.div`
 export const Button = styled.button`
   display: none;
 `
-
-export const List = styled.ul`
-  /* display: flex; */
-  /* overflow: scroll; */
-`

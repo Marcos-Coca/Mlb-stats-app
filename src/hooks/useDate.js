@@ -3,7 +3,7 @@ import moment from 'moment'
 
 export default function useDate({
   initialDate = moment(),
-  dateFormat = 'YYYY-MM-DD',
+  dateFormat = 'YYYY-MMM-DD',
 }) {
   const [date, setDate] = useState(() => moment(initialDate).format(dateFormat))
 
