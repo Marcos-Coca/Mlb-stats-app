@@ -1,0 +1,13 @@
+import styled from 'styled-components'
+
+export const Container = styled.footer`
+  color: #fff;
+  font-size: 20px;
+  padding: 1.5rem 0.5rem;
+  background: rgb(51, 51, 51);
+`
+
+export const Social = styled.div`
+  display: flex;
+  justify-content: space-around;
+`

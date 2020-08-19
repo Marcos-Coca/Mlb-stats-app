@@ -5,7 +5,7 @@ import useDate from 'Hooks/useDate'
 import DatesList from 'Components/Dates/DatesList'
 import ListOfSchedulesGames from 'Components/ScheduleGames/ListOfSchedulesGames'
 
-import mlbSecond from 'Assets/0_mlb.com_logo.jpg'
+import mlbLogo from 'Assets/0_mlb.com_logo.jpg'
 import { Image, Container } from './styles'
 
 export default function MinicoreBoard({ visibleDates }) {
@@ -14,7 +14,7 @@ export default function MinicoreBoard({ visibleDates }) {
 
   return (
     <Container>
-      <Image src={mlbSecond} alt="mlb.com" />
+      <Image src={mlbLogo} alt="mlb.com" />
       {isDesktop && (
         <DatesList date={date} requiredDates={visibleDates} setDate={setDate} />
       )}

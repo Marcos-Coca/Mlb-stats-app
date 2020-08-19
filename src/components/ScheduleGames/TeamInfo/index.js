@@ -9,7 +9,7 @@ export default function TeamInfo({ teamID, isDesktop, runs }) {
   return (
     <Container>
       <Info>
-        <TeamLogo src={team.WikipediaWordMarkUrl} />
+        <TeamLogo src={team.WikipediaWordMarkUrl || team.WikipediaLogoUrl} />
         {isDesktop ? <span>{team.Name}</span> : <span>{team.Key}</span>}
       </Info>
       <div>{runs}</div>
