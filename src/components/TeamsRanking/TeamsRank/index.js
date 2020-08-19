@@ -3,6 +3,8 @@ import useDate from 'Hooks/useDate'
 
 import TeamStanding from 'Components/TeamsRanking/TeamStanding'
 
+import { Container } from './styles'
+
 export default function TeamsRank() {
   const [season] = useDate({ dateFormat: 'YYYY' })
   const [league, setLeague] = useState('AL')
@@ -16,7 +18,7 @@ export default function TeamsRank() {
   const setWestDivision = () => setDivision('West')
 
   return (
-    <>
+    <Container>
       <div>
         <button onClick={setLeagueAmerican}>American League</button>
         <button onClick={setLeagueNational}>National League</button>
@@ -26,6 +28,6 @@ export default function TeamsRank() {
       <button onClick={setWestDivision}>{league} West</button>
 
       <TeamStanding season={season} division={division} league={league} />
-    </>
+    </Container>
   )
 }

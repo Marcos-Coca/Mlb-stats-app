@@ -1,5 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
+export const MAIN_COLOR = '#041E42'
+export const SECONDARY_COLOR = '#1F5A97'
+
 export const GlobalStyles = createGlobalStyle`
   html {
     box-sizing: border-box;

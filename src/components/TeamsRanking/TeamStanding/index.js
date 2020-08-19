@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react'
 import TeamStats from 'Components/TeamsRanking/TeamStats'
 import getTemasStanding from 'Services/getTeamsStanding'
 
+import { Table, Thead, Tbody, Th } from './styles'
+
 export default function TeamStanding({ division, league, season }) {
   const [teamsStanding, setTeamsStanding] = useState([])
 
@@ -11,23 +13,33 @@ export default function TeamStanding({ division, league, season }) {
   }, [season])
 
   return (
-    <table>
-      <thead>
+    <Table>
+      <Thead>
         <tr>
-          <th>{division}</th>
-          <th>W</th>
-          <th>L</th>
-          <th>%</th>
-          <th>GB</th>
+          <Th>
+            <span>{division}</span>
+          </Th>
+          <Th>
+            <span>W</span>
+          </Th>
+          <Th>
+            <span>L</span>
+          </Th>
+          <Th>
+            <span>%</span>
+          </Th>
+          <Th>
+            <span>GB</span>
+          </Th>
         </tr>
-      </thead>
-      <tbody>
+      </Thead>
+      <Tbody>
         {teamsStanding.map(
           ({ Division, League, TeamID }) =>
             Division === division &&
             League === league && <TeamStats key={TeamID} teamID={TeamID} />
         )}
-      </tbody>
-    </table>
+      </Tbody>
+    </Table>
   )
 }
