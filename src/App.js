@@ -1,5 +1,6 @@
 import React from 'react'
 import Home from './pages/Home/Home'
+import Layout from 'Components/Layout'
 import { GlobalStyles } from './styles/GlobalStyles'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { GamesContextProvider } from './context/GamesContext'
@@ -9,13 +10,15 @@ export default function App() {
   return (
     <BrowserRouter>
       <GlobalStyles />
-      <Switch>
-        <TeamsContextProvider>
-          <GamesContextProvider>
-            <Route path="/" component={Home} />
-          </GamesContextProvider>
-        </TeamsContextProvider>
-      </Switch>
+      <Layout>
+        <Switch>
+          <TeamsContextProvider>
+            <GamesContextProvider>
+              <Route path="/" component={Home} />
+            </GamesContextProvider>
+          </TeamsContextProvider>
+        </Switch>
+      </Layout>
     </BrowserRouter>
   )
 }

@@ -9,10 +9,8 @@ import { Container } from './styles.js'
 export default function Home() {
   return (
     <Container>
-      {/* <header>Header</header>
-
       <MiniScoreBoard visibleDates={2} />
-      <NewsList /> */}
+      <NewsList />
       <TeamsRank />
     </Container>
   )

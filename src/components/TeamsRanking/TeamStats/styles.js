@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { SECONDARY_COLOR } from '../../../styles/GlobalStyles'
 
 export const Tr = styled.tr`
-  background: #fff;
   vertical-align: middle;
   border-bottom: 1px solid #d2d2d2;
 

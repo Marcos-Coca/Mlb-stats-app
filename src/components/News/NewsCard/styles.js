@@ -35,7 +35,9 @@ export const Player = styled.img`
 export const Article = styled.article`
   width: 90%;
   margin: auto;
-  margin-top: 15px;
+  background: #fff;
+  margin-top: 1rem;
+  padding: 1rem 0;
 `
 
 export const Container = styled.div`

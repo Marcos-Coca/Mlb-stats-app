@@ -1,33 +1,57 @@
 import React, { useState } from 'react'
 import useDate from 'Hooks/useDate'
 
+import StateButton from 'Components/StateButton'
 import TeamStanding from 'Components/TeamsRanking/TeamStanding'
 
-import { Container } from './styles'
+import { Section, Divisions, Leagues, Link } from './styles'
 
 export default function TeamsRank() {
   const [season] = useDate({ dateFormat: 'YYYY' })
   const [league, setLeague] = useState('AL')
   const [division, setDivision] = useState('East')
 
-  const setLeagueAmerican = () => setLeague('AL')
-  const setLeagueNational = () => setLeague('NL')
-
-  const setEastDivision = () => setDivision('East')
-  const setCentralDivision = () => setDivision('Central')
-  const setWestDivision = () => setDivision('West')
-
   return (
-    <Container>
-      <div>
-        <button onClick={setLeagueAmerican}>American League</button>
-        <button onClick={setLeagueNational}>National League</button>
-      </div>
-      <button onClick={setEastDivision}>{league} East</button>
-      <button onClick={setCentralDivision}>{league} Central</button>
-      <button onClick={setWestDivision}>{league} West</button>
+    <div style={{ background: '#fff' }}>
+      <Section>
+        <h3>{season} Standings</h3>
+        <div>
+          <Leagues>
+            <StateButton state={league} newState={'AL'} setState={setLeague}>
+              American League
+            </StateButton>
+            <StateButton state={league} newState={'NL'} setState={setLeague}>
+              National League
+            </StateButton>
+          </Leagues>
+          <Divisions>
+            <StateButton
+              state={division}
+              newState={'East'}
+              setState={setDivision}
+            >
+              {league} East
+            </StateButton>
+            <StateButton
+              state={division}
+              newState={'Central'}
+              setState={setDivision}
+            >
+              {league} East
+            </StateButton>
+            <StateButton
+              state={division}
+              newState={'West'}
+              setState={setDivision}
+            >
+              {league} East
+            </StateButton>
+          </Divisions>
+        </div>
 
-      <TeamStanding season={season} division={division} league={league} />
-    </Container>
+        <TeamStanding season={season} division={division} league={league} />
+        <Link href="#">Full Standings</Link>
+      </Section>
+    </div>
   )
 }

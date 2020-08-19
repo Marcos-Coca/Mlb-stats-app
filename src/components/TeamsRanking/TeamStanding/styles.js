@@ -10,6 +10,7 @@ export const Table = styled.table`
   border-top: none;
   border-left: none;
   border-right: none;
+  margin-bottom: 1.5rem;
   border-collapse: collapse;
 `
 

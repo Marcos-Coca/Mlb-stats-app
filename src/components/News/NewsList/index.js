@@ -9,7 +9,11 @@ export default function NewsList() {
     getNews().then(setNews)
   }, [])
 
-  return news.map(currentNews => (
-    <NewsCard key={currentNews.NewsID} {...currentNews} />
-  ))
+  return (
+    <section style={{ background: '#fff' }}>
+      {news.map(currentNews => (
+        <NewsCard key={currentNews.NewsID} {...currentNews} />
+      ))}
+    </section>
+  )
 }
