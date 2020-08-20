@@ -12,10 +12,12 @@ export const Container = styled.li`
   width: 125px;
 
   @media (min-width: 1024px) {
-    width: 265px;
+    width: 90%;
+    min-width: 265px;
+    height: 80px;
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
   }
 `
 export const Teams = styled.div`

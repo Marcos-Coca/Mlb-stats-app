@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { SECONDARY_COLOR } from '../../../styles/GlobalStyles'
+import { SECONDARY_COLOR } from 'Styles/GlobalStyles'
 
 export const Tr = styled.tr`
   vertical-align: middle;

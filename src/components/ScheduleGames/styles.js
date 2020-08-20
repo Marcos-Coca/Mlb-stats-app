@@ -7,5 +7,7 @@ export const List = styled.ul`
 
   @media (min-width: 1024px) {
     flex-direction: column;
+    align-items: center;
+    overflow: hidden;
   }
 `

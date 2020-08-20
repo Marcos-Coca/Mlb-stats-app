@@ -3,13 +3,10 @@ import React from 'react'
 import useTeams from 'Hooks/useTeams'
 
 import { Tr, Team } from './styles'
+import FullTeamStats from './FullTeamStats'
 
-const searchStats = (teamID, teamsStanding) =>
-  teamsStanding.find(team => team.TeamID === teamID) || {}
-
-export default function TeamStats({ teamID, teamsStanding }) {
+export default function TeamStats({ teamID, teamStats, full }) {
   const { team } = useTeams(teamID)
-  const teamStats = searchStats(teamID, teamsStanding)
 
   return (
     <Tr>
@@ -25,6 +22,7 @@ export default function TeamStats({ teamID, teamsStanding }) {
       <td>{teamStats.Losses}</td>
       <td>.{Math.round(teamStats.Percentage * 1000)}</td>
       <td>{teamStats.GamesBehind === 0 ? '-' : teamStats.GamesBehind}</td>
+      {full && <FullTeamStats />}
     </Tr>
   )
 }

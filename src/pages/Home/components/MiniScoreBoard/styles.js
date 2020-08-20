@@ -1,16 +1,22 @@
 import styled from 'styled-components'
 
 export const Image = styled.img`
+  width: 95%;
   border-radius: 6px;
-  width: 90%;
   margin: 1em auto;
   display: block;
+  @media (min-width: 1440px) {
+    width: 90%;
+  }
 `
 
 export const Container = styled.div`
   font-weight: 700;
-`
-
-export const Button = styled.button`
-  display: none;
+  margin: auto;
+  @media (min-width: 1024px) {
+    width: 95%;
+  }
+  @media (min-width: 1440px) {
+    width: 90%;
+  }
 `

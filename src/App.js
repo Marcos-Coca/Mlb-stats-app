@@ -1,6 +1,6 @@
 import React from 'react'
-import Home from './pages/Home/Home'
-import Layout from 'Components/Layout'
+import Home from 'Pages/Home'
+import Layout from 'Pages/Layout'
 import { GlobalStyles } from './styles/GlobalStyles'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { GamesContextProvider } from './context/GamesContext'

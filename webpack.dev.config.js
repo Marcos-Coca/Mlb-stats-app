@@ -16,8 +16,10 @@ module.exports = {
     alias: {
       Components: path.resolve(__dirname, 'src/components'),
       Services: path.resolve(__dirname, 'src/services'),
+      Pages: path.resolve(__dirname, 'src/pages'),
       Hooks: path.resolve(__dirname, 'src/Hooks'),
       Assets: path.resolve(__dirname, 'assets'),
+      Styles: path.resolve(__dirname, 'src/styles'),
     },
   },
 

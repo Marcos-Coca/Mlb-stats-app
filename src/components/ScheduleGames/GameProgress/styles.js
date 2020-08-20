@@ -17,3 +17,12 @@ export const Container = styled.div`
     border-left: 2px solid #ececec;
   }
 `
+
+export const Info = styled.div`
+  @media (min-width: 1024px) {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+`

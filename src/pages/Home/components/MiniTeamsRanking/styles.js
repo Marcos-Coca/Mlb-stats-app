@@ -1,11 +1,14 @@
 import styled from 'styled-components'
 import { Link as RouterLink } from 'react-router-dom'
-import { FONT_SECOND_COLOR, THIRD_COLOR } from '../../../styles/GlobalStyles'
+import { FONT_SECOND_COLOR, THIRD_COLOR } from 'Styles/GlobalStyles'
 
-export const Section = styled.section`
+export const Container = styled.section`
+  background: #fff;
+`
+
+export const Section = styled.div`
   width: 90%;
   margin: 1rem auto;
-  background: #fff;
   & button,
   h3 {
     font-weight: 700;
