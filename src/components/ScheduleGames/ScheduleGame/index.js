@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive'
 import TeamInfo from 'Components/ScheduleGames/TeamInfo'
 import GameProgress from 'Components/ScheduleGames/GameProgress'
 
-import { Container } from './styles'
+import { Container, Teams } from './styles'
 
 export default function ScheduleGame({ game }) {
   const isDesktop = useMediaQuery({ minWidth: 1024 })
@@ -17,14 +17,16 @@ export default function ScheduleGame({ game }) {
   return (
     <Container>
       <GameProgress game={game} showAll={isDesktop} />
-      {teams.map(({ teamID, runs }) => (
-        <TeamInfo
-          key={teamID}
-          teamID={teamID}
-          runs={runs}
-          isDesktop={isDesktop}
-        />
-      ))}
+      <Teams>
+        {teams.map(({ teamID, runs }) => (
+          <TeamInfo
+            key={teamID}
+            teamID={teamID}
+            runs={runs}
+            isDesktop={isDesktop}
+          />
+        ))}
+      </Teams>
     </Container>
   )
 }

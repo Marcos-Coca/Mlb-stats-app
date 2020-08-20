@@ -14,8 +14,8 @@ export default function GameProgress({ game, showAll }) {
       {Status !== 'Scheduled' ? (
         <>
           {Status !== 'InProgress' && <span>{Status}</span>}
-          {Status !== 'Final' && <span> Inning {Inning}</span>}
-          {showAll && <GameStatus {...game} />}
+          {Status === 'InProgress' && <span> Inning {Inning}</span>}
+          {showAll && Status === 'InProgress' && <GameStatus {...game} />}
         </>
       ) : (
         <div>{gameDateTime}</div>

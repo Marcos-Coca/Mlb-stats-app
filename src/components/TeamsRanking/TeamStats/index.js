@@ -1,13 +1,15 @@
 import React from 'react'
 
 import useTeams from 'Hooks/useTeams'
-import useTeamStats from 'Hooks/useTeamStats'
 
 import { Tr, Team } from './styles'
 
-export default function TeamStats({ teamID }) {
+const searchStats = (teamID, teamsStanding) =>
+  teamsStanding.find(team => team.TeamID === teamID) || {}
+
+export default function TeamStats({ teamID, teamsStanding }) {
   const { team } = useTeams(teamID)
-  const teamStats = useTeamStats(teamID)
+  const teamStats = searchStats(teamID, teamsStanding)
 
   return (
     <Tr>

@@ -37,7 +37,13 @@ export default function TeamStanding({ division, league, season }) {
         {teamsStanding.map(
           ({ Division, League, TeamID }) =>
             Division === division &&
-            League === league && <TeamStats key={TeamID} teamID={TeamID} />
+            League === league && (
+              <TeamStats
+                key={TeamID}
+                teamsStanding={teamsStanding}
+                teamID={TeamID}
+              />
+            )
         )}
       </Tbody>
     </Table>

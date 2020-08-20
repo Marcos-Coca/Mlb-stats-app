@@ -10,4 +10,20 @@ export const Container = styled.li`
   color: rgba(34, 34, 34);
   height: 76px;
   width: 125px;
+
+  @media (min-width: 1024px) {
+    width: 265px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+`
+export const Teams = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  @media (min-width: 1024px) {
+    width: 68%;
+  }
 `

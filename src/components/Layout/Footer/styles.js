@@ -5,9 +5,23 @@ export const Container = styled.footer`
   font-size: 20px;
   padding: 1.5rem 0.5rem;
   background: rgb(51, 51, 51);
+
+  @media (min-width: 1024px) {
+    display: flex;
+    font-size: 24px;
+    justify-content: space-evenly;
+  }
+
+  & div {
+    padding: 5px 0;
+    text-align: center;
+  }
 `
 
 export const Social = styled.div`
   display: flex;
   justify-content: space-around;
+  @media (min-width: 1024px) {
+    width: 60%;
+  }
 `
