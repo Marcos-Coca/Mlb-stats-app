@@ -50,7 +50,7 @@ export default function TeamsRank() {
         </div>
 
         <TeamStanding season={season} division={division} league={league} />
-        <Link href="#">Full Standings</Link>
+        <Link to="/standings">Full Standings</Link>
       </Section>
     </div>
   )

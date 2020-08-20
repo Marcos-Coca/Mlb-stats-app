@@ -14,7 +14,7 @@ export default function Header() {
       <Nav>
         <Link to="/scores">Scores</Link>
         <Link to="/stats">Stats</Link>
-        <Link to="/standing">Standing</Link>
+        <Link to="/standings">Standings</Link>
         <Link to="/schedule">Schedule</Link>
       </Nav>
     </Container>

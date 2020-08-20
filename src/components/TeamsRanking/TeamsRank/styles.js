@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Link as RouterLink } from 'react-router-dom'
 import { FONT_SECOND_COLOR, THIRD_COLOR } from '../../../styles/GlobalStyles'
 
 export const Section = styled.section`
@@ -18,7 +19,7 @@ export const Section = styled.section`
     font-size: 1.5rem;
   }
 `
-export const Link = styled.a`
+export const Link = styled(RouterLink)`
   display: inline-block;
   margin-bottom: 1.5rem;
 
