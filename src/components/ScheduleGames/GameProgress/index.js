@@ -1,13 +1,13 @@
 import React from 'react'
+import { format } from 'date-fns'
 
-import useDate from 'Hooks/useDate'
 import GameStatus from 'Components/ScheduleGames/GameStatus'
 
 import { Container, Info } from './styles'
 
 export default function GameProgress({ game, showAll }) {
   const { DateTime, Status, Inning } = game
-  const [gameDateTime] = useDate({ initialDate: DateTime, dateFormat: 'LT' })
+  const gameDateTime = format(new Date(DateTime), 'p')
 
   return (
     <Container>

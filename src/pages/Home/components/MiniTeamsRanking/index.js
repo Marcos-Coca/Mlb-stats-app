@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import useDate from 'Hooks/useDate'
+import { format } from 'date-fns'
 
 import TeamsStanding from 'Components/TeamsStanding'
 
@@ -9,7 +9,7 @@ import LeagueButtons from './LeagueButtons'
 import { Section, Divisions, Leagues, Link, Container } from './styles'
 
 export default function TeamsRank() {
-  const [season] = useDate({ dateFormat: 'YYYY' })
+  const season = format(new Date(), 'Y')
   const [league, setLeague] = useState('AL')
   const [division, setDivision] = useState('East')
 

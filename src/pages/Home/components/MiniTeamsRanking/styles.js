@@ -11,6 +11,7 @@ export const Section = styled.div`
   margin: 1rem auto;
   & button,
   h3 {
+    cursor: pointer;
     font-weight: 700;
     font-size: 0.875rem;
     color: ${FONT_SECOND_COLOR};
@@ -44,6 +45,10 @@ export const Divisions = styled.div`
     text-shadow: 0 1px 0 #fff;
   }
   & .active {
+    background: #ececec;
+  }
+
+  & button:hover {
     background: #ececec;
   }
 `

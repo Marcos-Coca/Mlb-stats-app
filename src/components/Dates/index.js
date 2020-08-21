@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import moment from 'moment'
+import { isEqual, subDays } from 'date-fns'
 
 import DateCard from 'Components/Dates/DateCard'
 import { Container } from './styles'
@@ -11,8 +11,9 @@ export default function DateLists({ date, requiredDates, setDate }) {
     setDates([])
 
     const maxDate = Math.floor(requiredDates / 2)
+
     for (let i = 0; i <= requiredDates; i++) {
-      const currentDate = moment(date).subtract(i - maxDate, 'days')
+      const currentDate = subDays(date, i - maxDate)
       setDates(otherDates => otherDates.concat(currentDate))
     }
   }, [date])
@@ -23,7 +24,7 @@ export default function DateLists({ date, requiredDates, setDate }) {
         <DateCard
           key={currentDate}
           date={currentDate}
-          active={moment(date).isSame(moment(currentDate))}
+          active={isEqual(date, new Date(currentDate))}
           setDate={setDate}
         />
       ))}

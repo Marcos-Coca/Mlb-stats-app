@@ -41,7 +41,6 @@ export default function NewsCard({ Title, Content, PlayerID, TeamID }) {
       </Header>
       <div>
         <h3>{Title}</h3>
-        {/* <p>{Content.substring(0, 200) + '...'}</p> */}
         <p>{Content}</p>
       </div>
     </Article>

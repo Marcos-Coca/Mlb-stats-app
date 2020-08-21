@@ -1,6 +1,7 @@
 import React from 'react'
 import Home from 'Pages/Home'
 import Layout from 'Pages/Layout'
+import Standings from 'Pages/Standings'
 import { GlobalStyles } from './styles/GlobalStyles'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { GamesContextProvider } from './context/GamesContext'
@@ -14,7 +15,8 @@ export default function App() {
         <Switch>
           <TeamsContextProvider>
             <GamesContextProvider>
-              <Route path="/" component={Home} />
+              <Route exact path="/" component={() => <div>Home</div>} />
+              <Route path="/standings" component={Standings} />
             </GamesContextProvider>
           </TeamsContextProvider>
         </Switch>

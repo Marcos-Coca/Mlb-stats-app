@@ -1,7 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
-import useDate from 'Hooks/useDate'
 import Dates from 'Components/Dates'
 import SchedulesGames from 'Components/ScheduleGames'
 
@@ -9,7 +8,7 @@ import mlbLogo from 'Assets/0_mlb.com_logo.jpg'
 import { Image, Container } from './styles'
 
 export default function MinicoreBoard({ visibleDates }) {
-  const [date, setDate] = useDate({})
+  const [date, setDate] = useState(() => new Date())
   const isDesktop = useMediaQuery({ minWidth: 1024 })
 
   return (

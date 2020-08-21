@@ -1,16 +1,15 @@
 import React from 'react'
-import moment from 'moment'
+import { format } from 'date-fns'
 
 import { Container } from './styles'
 
 export default function DateCard({ date, active, setDate }) {
-  const handleClick = () => setDate({ especificDate: date })
-
+  const handleClick = () => setDate(new Date(date))
   return (
     <Container onClick={handleClick}>
       <div className={active ? 'active' : ''}>
-        <div>{moment(date).format('ddd')}</div>
-        <div>{moment(date).format('MMM-DD')}</div>
+        <div>{format(date, 'eee')}</div>
+        <div>{format(date, 'MMM-dd')}</div>
       </div>
     </Container>
   )

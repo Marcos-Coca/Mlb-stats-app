@@ -22,7 +22,7 @@ export default function TeamStats({ teamID, teamStats, full }) {
       <td>{teamStats.Losses}</td>
       <td>.{Math.round(teamStats.Percentage * 1000)}</td>
       <td>{teamStats.GamesBehind === 0 ? '-' : teamStats.GamesBehind}</td>
-      {full && <FullTeamStats />}
+      {full && <FullTeamStats stats={teamStats} />}
     </Tr>
   )
 }

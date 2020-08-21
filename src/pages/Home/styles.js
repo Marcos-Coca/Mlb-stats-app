@@ -10,7 +10,6 @@ export const Container = styled.div`
 
     grid-template-columns: 1fr 2fr 1fr;
     grid-column-gap: 1rem;
-    margin-top: 1rem;
     justify-items: center;
 
     & .MiniScoreBoard {

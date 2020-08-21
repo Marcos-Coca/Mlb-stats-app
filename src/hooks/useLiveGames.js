@@ -1,11 +1,12 @@
 import { useEffect, useRef } from 'react'
-import useDate from 'Hooks/useDate'
+import { format } from 'date-fns'
+
 import anyGameInProgress from 'Services/anyGameInProgress'
 import useGames from 'Hooks/useGames'
 
 export default function useLiveGames() {
-  const [today] = useDate({ dateFormat: 'YYYY-MMM-D' })
-  const { schedulesGames, searchGames } = useGames(today)
+  const today = format(new Date(), 'yyyy-MMM-d')
+  const { schedulesGames, searchGames } = useGames(new Date())
   const interval = useRef(false)
 
   useEffect(() => {

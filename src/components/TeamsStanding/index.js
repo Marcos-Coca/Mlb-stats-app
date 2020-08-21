@@ -6,7 +6,12 @@ import getTemasStanding from 'Services/getTeamsStanding'
 
 import { Table, Tbody, Thead } from './styles'
 
-export default function TeamsStanding({ title, isValidTeam, full, season }) {
+export default function TeamsStanding({
+  title,
+  isValidTeam,
+  full,
+  season = '2020',
+}) {
   const [teamsStanding, setTeamsStanding] = useState([])
 
   useEffect(() => {

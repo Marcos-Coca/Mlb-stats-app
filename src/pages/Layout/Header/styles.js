@@ -10,6 +10,7 @@ export const Container = styled.header`
   width: 100%;
   color: white;
   font-weight: 700;
+  margin-bottom: 1rem;
   position: relative;
   text-align: center;
   background: ${MAIN_COLOR};
