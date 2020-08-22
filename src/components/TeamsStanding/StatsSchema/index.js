@@ -10,16 +10,25 @@ export default function StastSchema({ full, title }) {
         <span>{title}</span>
       </Th>
       <Th>
-        <span>W</span>
+        <div>
+          W<span>Wins</span>
+        </div>
       </Th>
       <Th>
-        <span>L</span>
+        <div>
+          L<span>Losses</span>
+        </div>
       </Th>
       <Th>
-        <span>%</span>
+        <div>
+          %<span>Winning Percentage</span>
+        </div>
       </Th>
       <Th>
-        <span>GB</span>
+        <div>
+          GB
+          <span>Games Behind</span>
+        </div>
       </Th>
       {full && <FullStatsSchema />}
     </tr>

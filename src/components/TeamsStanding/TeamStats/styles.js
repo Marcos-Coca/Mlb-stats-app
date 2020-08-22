@@ -9,8 +9,9 @@ export const Tr = styled.tr`
     text-align: center;
   }
   & td:first-child {
-    border-right: 1px solid #d2d2d2;
+    width: 15%;
     text-align: initial;
+    border-right: 1px solid #d2d2d2;
   }
 `
 

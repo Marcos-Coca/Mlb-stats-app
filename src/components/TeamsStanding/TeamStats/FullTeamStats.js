@@ -6,10 +6,10 @@ export default function FullTeamStats({ stats }) {
       <td>
         {stats.WildCardGamesBehind === 0 ? '-' : stats.WildCardGamesBehind}
       </td>
-      <td>{stats.Streak}</td>
       <td>
         {stats.LastTenGamesWins}-{stats.LastTenGamesLosses}{' '}
       </td>
+      <td>{stats.Streak}</td>
       <td>{stats.RunsScored}</td>
       <td>{stats.RunsAgainst}</td>
       <td>{stats.RunsScored - stats.RunsAgainst}</td>

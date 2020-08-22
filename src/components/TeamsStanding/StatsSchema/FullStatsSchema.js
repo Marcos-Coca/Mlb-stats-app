@@ -6,28 +6,52 @@ export default function StatsSchemaFull() {
   return (
     <>
       <Th>
-        <span>WCGB</span>
+        <div>
+          WCGB
+          <span>Wild Card Games Behind</span>
+        </div>
       </Th>
       <Th>
-        <span>L10</span>
+        <div>
+          L10
+          <span>Record in the Last 10 Games</span>
+        </div>
       </Th>
       <Th>
-        <span>STRK</span>
+        <div>
+          STRK
+          <span>Current Streak</span>
+        </div>
       </Th>
       <Th>
-        <span>RS</span>
+        <div>
+          RS
+          <span>Runs Scored</span>
+        </div>
       </Th>
       <Th>
-        <span>RA</span>
+        <div>
+          RA
+          <span>Runs Allowed</span>
+        </div>
       </Th>
       <Th>
-        <span>DIFF</span>
+        <div>
+          DIFF
+          <span>Run Differential (runs scored - runs allowed)</span>
+        </div>
       </Th>
       <Th>
-        <span>Home</span>
+        <div>
+          Home
+          <span>Record at Home</span>
+        </div>
       </Th>
       <Th>
-        <span>Away</span>
+        <div>
+          Away
+          <span>Record When Away</span>
+        </div>
       </Th>
     </>
   )
