@@ -2,6 +2,7 @@ import styled from 'styled-components'
 import { FONT_SECOND_COLOR, FONT_MAIN_COLOR } from 'Styles/GlobalStyles'
 
 export const Container = styled.div`
+  cursor: pointer;
   text-align: center;
   color: ${FONT_SECOND_COLOR};
 

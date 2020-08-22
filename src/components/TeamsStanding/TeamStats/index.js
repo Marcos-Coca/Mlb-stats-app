@@ -6,7 +6,15 @@ import { Tr, Team } from './styles'
 import FullTeamStats from './FullTeamStats'
 
 export default function TeamStats({ teamID, teamStats, full }) {
-  const { team } = useTeams(teamID)
+  const { team, loading } = useTeams(teamID)
+
+  if (loading) {
+    return (
+      <tr>
+        <td>Loading...</td>
+      </tr>
+    )
+  }
 
   return (
     <Tr>

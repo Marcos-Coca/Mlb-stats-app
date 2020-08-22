@@ -11,17 +11,20 @@ import {
 } from './styles'
 
 export default function NewsCard({ Title, Content, PlayerID, TeamID }) {
-  const { team } = useTeams(TeamID)
+  const { team = {}, loading } = useTeams(TeamID)
   const [player, setPlayer] = useState('')
-  const borderColor = `#${team.PrimaryColor}`
 
   useEffect(() => {
-    getPlayer(PlayerID).then(setPlayer)
+    PlayerID && getPlayer(PlayerID).then(setPlayer)
   }, [])
+
+  if (loading) {
+    return <div>Loading...</div>
+  }
 
   return (
     <Article>
-      <Header style={{ borderColor }}>
+      <Header borderColor={team.PrimaryColor}>
         <Container>
           <TeamLogo>
             {TeamID && <img src={team.WikipediaWordMarkUrl} alt={team.Name} />}

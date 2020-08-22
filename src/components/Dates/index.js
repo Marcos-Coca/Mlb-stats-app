@@ -13,7 +13,7 @@ export default function DateLists({ date, requiredDates, setDate }) {
     const maxDate = Math.floor(requiredDates / 2)
 
     for (let i = 0; i <= requiredDates; i++) {
-      const currentDate = subDays(date, i - maxDate)
+      const currentDate = subDays(date, maxDate - i)
       setDates(otherDates => otherDates.concat(currentDate))
     }
   }, [date])

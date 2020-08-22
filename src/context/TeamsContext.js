@@ -9,8 +9,9 @@ export function TeamsContextProvider({ children }) {
 
   useEffect(() => {
     setLoading(true)
-    getTeams().then(setTeams)
-    setLoading(false)
+    getTeams()
+      .then(setTeams)
+      .then(() => setLoading(false))
   }, [])
 
   return (

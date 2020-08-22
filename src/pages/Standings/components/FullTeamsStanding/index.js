@@ -1,7 +1,7 @@
 import React from 'react'
 import { format } from 'date-fns'
 
-import useTeamsStats from 'Hooks/useTeamsStats'
+import useTeamsStanding from 'Hooks/useTeamsStanding'
 import TeamsStanding from 'Components/TeamsStanding'
 
 const OPTIONS = {
@@ -19,7 +19,7 @@ const OPTIONS = {
 
 export default function FullTeamsStanding({ sortBy }) {
   const season = format(new Date(), 'yyyy')
-  const teamsStanding = useTeamsStats({ season })
+  const teamsStanding = useTeamsStanding({ season })
 
   return OPTIONS[sortBy].map(option => {
     const isValidTeam = team =>

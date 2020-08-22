@@ -24,7 +24,8 @@ export const Header = styled.header`
   overflow: hidden;
   background: #f7f7f7;
   align-items: center;
-  border-top: 2px solid #000;
+  justify-content: space-between;
+  border-top: 2px solid ${props => `#${props.borderColor || 'black'}`};
   justify-content: space-between;
 `
 

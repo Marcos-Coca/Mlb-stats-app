@@ -23,4 +23,9 @@ export const Container = styled.main`
     margin: auto;
     padding: 1rem 0;
   }
+  & h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
 `

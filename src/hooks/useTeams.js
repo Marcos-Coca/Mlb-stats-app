@@ -1,15 +1,12 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import TeamsContext from '../context/TeamsContext'
 
 export default function useTeams(id) {
   const { teams, loading } = useContext(TeamsContext)
 
-  if (loading) {
-    return { loading }
-  }
   if (!id) {
-    return { teams }
+    return { teams, loading }
   }
   const team = teams.find(team => team.TeamID === id) || {}
-  return { team }
+  return { team, loading }
 }

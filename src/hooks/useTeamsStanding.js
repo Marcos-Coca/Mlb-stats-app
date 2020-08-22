@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 
 import getTemasStanding from 'Services/getTeamsStanding'
 
-export default function useTeamsStats({ season }) {
+export default function useTeamsStanding({ season }) {
   const [teamsStanding, setTeamsStanding] = useState([])
 
   useEffect(() => {
