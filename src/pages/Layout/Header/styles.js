@@ -6,9 +6,9 @@ import { MAIN_COLOR } from '../../../styles/GlobalStyles'
 export const Link = styled(LinkRouter)``
 
 export const Container = styled.header`
-  z-index: 1;
   width: 100%;
   color: white;
+  z-index: 2000;
   font-weight: 700;
   margin-bottom: 1rem;
   position: relative;
