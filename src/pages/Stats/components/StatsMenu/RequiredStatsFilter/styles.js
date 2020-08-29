@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: inline-block;
 
   & h2 {
+    cursor: pointer;
     color: #c2c2c2;
     font-size: 2rem;
     font-weight: 800;

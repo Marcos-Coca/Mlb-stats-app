@@ -1,11 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-
-export const MAIN_COLOR = '#041E42'
-export const SECONDARY_COLOR = '#1F5A97'
-export const THIRD_COLOR = '#057aff'
-
-export const FONT_MAIN_COLOR = '#222222'
-export const FONT_SECOND_COLOR = '#666666'
+import { FONT_MAIN_COLOR, PASIVE_COLOR } from './colors'
 
 export const GlobalStyles = createGlobalStyle`
   html {
@@ -26,11 +20,18 @@ export const GlobalStyles = createGlobalStyle`
     height: 100vh;
     color:${FONT_MAIN_COLOR} ;
     margin: 0 auto;
-    background: #ECECEC;
+    background: ${PASIVE_COLOR};
     overscroll-behavior: none;
   }
   a{
     color:inherit;
     text-decoration: none;
+  }
+  table{
+  border-spacing: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-collapse: collapse;
   }
 `

@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
-export const Li = styled.li`
+import { FONT_OFF_COLOR } from 'Styles/colors'
+
+export const Tr = styled.tr`
   display: flex;
   color: #1d1d1d;
   min-height: 60px;
@@ -8,13 +10,22 @@ export const Li = styled.li`
   font-weight: 600;
   align-items: center;
   border-bottom: 2px solid #efefef;
-  & > div {
+  & th {
     width: 100%;
     height: 50px;
     display: flex;
     align-items: center;
-    padding-right: 25px;
     justify-content: space-around;
+  }
+`
+export const Header = styled.tr`
+  color: ${FONT_OFF_COLOR};
+  font-weight: 600;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  & th {
+    text-align: left;
+    padding-left: 10px;
   }
 `
 
@@ -22,7 +33,6 @@ export const ImageContainer = styled.div`
   width: 50px;
   height: 100%;
   display: flex;
-  margin-left: 10px;
   align-items: center;
   & img {
     width: 100%;
@@ -36,6 +46,10 @@ export const Info = styled.div`
   width: 70%;
   display: flex;
   justify-content: space-between;
+
+  & > div {
+    text-align: left;
+  }
 
   & .stat {
     color: #444444;

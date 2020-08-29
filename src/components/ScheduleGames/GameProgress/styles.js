@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { PASIVE_COLOR } from 'Styles/colors'
+
 export const Container = styled.div`
   color: rgb(102, 102, 102);
   font-size: 10px;
@@ -14,7 +16,7 @@ export const Container = styled.div`
     font-size: 0.8rem;
     align-items: center;
     justify-content: center;
-    border-left: 2px solid #ececec;
+    border-left: 2px solid ${PASIVE_COLOR};
   }
 `
 

@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { SECONDARY_COLOR } from 'Styles/GlobalStyles'
+import { SECONDARY_COLOR, PASIVE_COLOR } from 'Styles/colors'
 
 export const Container = styled.main`
   width: 90%;
@@ -14,7 +14,7 @@ export const Container = styled.main`
   & tbody td:first-child {
     font-weight: 700;
     border-width: 2px;
-    background: #ececec;
+    background: ${PASIVE_COLOR};
     color: ${SECONDARY_COLOR};
   }
 

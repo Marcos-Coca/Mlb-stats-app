@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { SECONDARY_COLOR, FONT_OFF_COLOR } from 'Styles/colors'
 
 export const Container = styled.div`
   margin: 15px 0;
@@ -7,7 +8,7 @@ export const Container = styled.div`
 
   & button {
     border: none;
-    color: #888888;
+    color: ${FONT_OFF_COLOR};
     font-weight: 700;
     font-size: 1.25rem;
     position: relative;
@@ -24,7 +25,7 @@ export const Container = styled.div`
     bottom: 0;
     height: 2px;
     position: absolute;
-    background: #00519f;
+    background: ${SECONDARY_COLOR};
     border-radius: 1.5px;
   }
 `

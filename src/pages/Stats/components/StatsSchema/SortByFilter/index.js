@@ -8,13 +8,8 @@ export default function SortByFilter({ text, value }) {
   const handleClick = () => setSortBy(value)
 
   return (
-    <div>
-      <button
-        className={filters.sortBy === value ? 'active' : ''}
-        onClick={handleClick}
-      >
-        {text}
-      </button>
-    </div>
+    <th className={filters.sortBy === value ? 'active' : ''}>
+      <button onClick={handleClick}>{text}</button>
+    </th>
   )
 }

@@ -16,7 +16,7 @@ export default function App() {
         <Switch>
           <TeamsContextProvider>
             <GamesContextProvider>
-              <Route exact path="/" component={() => <div>Homeee</div>} />
+              <Route exact path="/" component={Home} />
               <Route path="/standings" component={Standings} />
             </GamesContextProvider>
             <Route path="/stats" component={Stats} />

@@ -1,17 +1,12 @@
 import styled from 'styled-components'
-import { MAIN_COLOR } from 'Styles/GlobalStyles'
+import { MAIN_COLOR } from 'Styles/colors'
 
 export const Table = styled.table`
   width: 100%;
   margin: auto;
   height: 270px;
   font-size: 14px;
-  border-spacing: 0;
-  border-top: none;
-  border-left: none;
-  border-right: none;
   margin-bottom: 1.5rem;
-  border-collapse: collapse;
 `
 export const Tbody = styled.tbody`
   border-top: none;

@@ -1,2 +1,2 @@
-export const API_KEY = 'c9ad4d12b65f4c2ebdb042da801cc2d4'
+export const API_KEY = '8cfe27307c0b448f8d634fba3bca4fec'
 export const API_URL = 'https://api.sportsdata.io/v3/mlb'

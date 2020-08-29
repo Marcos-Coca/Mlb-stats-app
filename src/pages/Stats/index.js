@@ -2,16 +2,24 @@ import React from 'react'
 
 import StatsTable from './components/StatsTable'
 import StatsMenu from './components/StatsMenu'
+import StatsSchema from './components/StatsSchema'
+
+import { Container, Table, TableContainer } from './styles'
 
 import { StatsFiltersContextProvider } from './context/StatsFiltersContext'
 
 export default function Stats() {
   return (
-    <div style={{ background: '#fff' }}>
+    <Container>
       <StatsFiltersContextProvider>
         <StatsMenu />
-        <StatsTable />
+        <TableContainer>
+          <Table>
+            <StatsSchema />
+            <StatsTable />
+          </Table>
+        </TableContainer>
       </StatsFiltersContextProvider>
-    </div>
+    </Container>
   )
 }

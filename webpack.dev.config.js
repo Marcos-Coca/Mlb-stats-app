@@ -20,6 +20,7 @@ module.exports = {
       Hooks: path.resolve(__dirname, 'src/Hooks'),
       Assets: path.resolve(__dirname, 'assets'),
       Styles: path.resolve(__dirname, 'src/styles'),
+      Utils: path.resolve(__dirname, 'src/utils'),
     },
   },
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link as LinkRouter } from 'react-router-dom'
 
-import { MAIN_COLOR } from '../../../styles/GlobalStyles'
+import { MAIN_COLOR } from 'Styles/colors'
 
 export const Link = styled(LinkRouter)``
 

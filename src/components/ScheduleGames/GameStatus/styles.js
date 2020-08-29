@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { FONT_SECOND_COLOR } from '../../../styles/GlobalStyles'
+import { FONT_SECOND_COLOR } from 'Styles/colors'
 
 export const Out = styled.div`
   width: 100%;

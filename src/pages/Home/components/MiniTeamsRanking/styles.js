@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { Link as RouterLink } from 'react-router-dom'
-import { FONT_SECOND_COLOR, THIRD_COLOR } from 'Styles/GlobalStyles'
+import { FONT_SECOND_COLOR, THIRD_COLOR, PASIVE_COLOR } from 'Styles/colors'
 
 export const Container = styled.section`
   background: #fff;
@@ -45,11 +45,11 @@ export const Divisions = styled.div`
     text-shadow: 0 1px 0 #fff;
   }
   & .active {
-    background: #ececec;
+    background: ${PASIVE_COLOR};
   }
 
   & button:hover {
-    background: #ececec;
+    background: ${PASIVE_COLOR};
   }
 `
 export const Leagues = styled.div`
