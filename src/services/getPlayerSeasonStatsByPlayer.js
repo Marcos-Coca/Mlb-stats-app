@@ -1,9 +1,9 @@
-import { API_KEY, API_URL } from '../utils/apiKey'
+import requestInterceptor from '../utils/requestInterceptor'
 
 export default function getPlayerSeasonStatsByPlayer(season, player) {
-  return fetch(
-    `${API_URL}/stats/json/PlayerSeasonStatsByPlayer/${season}/${player}?key=${API_KEY}`
+  return requestInterceptor(
+    `stats/json/PlayerSeasonStatsByPlayer/${season}/${player}`
   )
-    .then(res => res.json())
+    .then(res => res)
     .catch(err => {})
 }

@@ -1,7 +1,5 @@
-import { API_KEY, API_URL } from '../utils/apiKey'
+import requestInterceptor from '../utils/requestInterceptor'
 
 export default function anyGameInProgress() {
-  return fetch(
-    `${API_URL}/scores/json/AreAnyGamesInProgress?key=${API_KEY}`
-  ).then(res => res.json())
+  return requestInterceptor('scores/json/AreAnyGamesInProgress')
 }
