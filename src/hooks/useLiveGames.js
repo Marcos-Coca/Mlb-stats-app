@@ -13,7 +13,7 @@ export default function useLiveGames() {
     anyGameInProgress().then(
       isPlaying =>
         isPlaying &&
-        (interval.current = setInterval(searchGames, 1000 * 60 * 3))
+        (interval.current = setInterval(searchGames, 1000 * 60 * 4))
     )
     return () => clearInterval(interval.current)
   }, [])

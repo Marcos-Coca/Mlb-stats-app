@@ -1,7 +1,7 @@
 import React from 'react'
 import { format } from 'date-fns'
 
-import GameStatus from 'Components/ScheduleGames/GameStatus'
+import GameStatus from 'Components/GameStatus'
 
 import { Container, Info } from './styles'
 

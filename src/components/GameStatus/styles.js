@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { FONT_SECOND_COLOR } from 'Styles/colors'
+import { FONT_SECOND_COLOR, LIVE_COLOR } from 'Styles/colors'
 
 export const Out = styled.div`
   width: 100%;
@@ -23,7 +23,7 @@ export const Container = styled.div`
   justify-content: space-evenly;
 
   & .active {
-    background: rgb(255, 168, 1);
+    background: ${LIVE_COLOR};
   }
 `
 
@@ -32,9 +32,9 @@ export const Runners = styled.div`
   & div {
     width: 12px;
     height: 12px;
-    border-radius: 1.5px;
+    border-radius: 2px;
     transform: rotate(45deg);
-    border: 2px solid ${FONT_SECOND_COLOR};
+    border: 1.4px solid ${FONT_SECOND_COLOR};
   }
 
   & div:nth-child(2) {

@@ -3,6 +3,7 @@ import Home from 'Pages/Home'
 import Stats from 'Pages/Stats'
 import Layout from 'Pages/Layout'
 import Standings from 'Pages/Standings'
+import Scores from 'Pages/Scores'
 import { GlobalStyles } from './styles/GlobalStyles'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { GamesContextProvider } from './context/GamesContext'
@@ -18,6 +19,7 @@ export default function App() {
             <GamesContextProvider>
               <Route exact path="/" component={Home} />
               <Route path="/standings" component={Standings} />
+              <Route path="/scores/" component={Scores} />
             </GamesContextProvider>
             <Route path="/stats" component={Stats} />
           </TeamsContextProvider>

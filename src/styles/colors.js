@@ -1,6 +1,7 @@
 export const MAIN_COLOR = '#041E42'
 export const SECONDARY_COLOR = '#1F5A97'
 export const THIRD_COLOR = '#057aff'
+export const LIVE_COLOR = 'rgb(255, 168, 1)'
 
 export const PASIVE_COLOR = '#ececec'
 

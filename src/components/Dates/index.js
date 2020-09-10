@@ -16,7 +16,7 @@ export default function DateLists({ date, requiredDates, setDate }) {
       const currentDate = subDays(date, maxDate - i)
       setDates(otherDates => otherDates.concat(currentDate))
     }
-  }, [date])
+  }, [date, requiredDates])
 
   return (
     <Container>

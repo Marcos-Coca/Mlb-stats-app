@@ -15,9 +15,13 @@ export const Container = styled.header`
   text-align: center;
   background: ${MAIN_COLOR};
   box-shadow: 1px 0 5px #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 `
 
 export const Nav = styled.nav`
+  width: 60%;
   display: flex;
   padding-bottom: 8px;
   justify-content: space-around;

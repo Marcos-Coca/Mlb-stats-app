@@ -10,6 +10,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'js/[name].js',
+    publicPath: '/',
   },
 
   resolve: {
@@ -28,6 +29,7 @@ module.exports = {
     hot: true,
     open: true,
     port: 3000,
+    historyApiFallback: true,
   },
   module: {
     rules: [
