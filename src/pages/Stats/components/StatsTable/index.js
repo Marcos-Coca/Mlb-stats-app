@@ -8,14 +8,18 @@ import useStats from '../../hooks/useStats'
 import useStatsFilters from '../../hooks/useStatsFilters'
 
 export default function StatsTable() {
-  const stats = useStats()
+  const { stats, loading } = useStats()
   const { filters } = useStatsFilters()
 
   const tablet = useMediaQuery({ maxWidth: 500 })
 
   return (
     <tbody>
-      {tablet ? (
+      {loading ? (
+        <tr>
+          <td>Loading...</td>
+        </tr>
+      ) : tablet ? (
         <StatsTableMobile sortBy={filters.sortBy} stats={stats} />
       ) : (
         <StatsTableDesktop stats={stats} />

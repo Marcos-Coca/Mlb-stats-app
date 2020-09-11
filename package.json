@@ -2,10 +2,10 @@
   "name": "mlb-stats-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "webpack",
-    "build": "webpack --config ./webpack.config.js --mode production",
+    "start": "webpack-dev-server --open",
+    "build": "webpack --config ./webpack.config.js",
     "dev": "webpack-dev-server --config ./webpack.dev.config.js",
     "build:dev": "webpack --config ./webpack.dev.config.js",
     "test": ""
@@ -17,10 +17,12 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-icons": "^3.11.0",
+    "react-is": "16.8",
     "react-responsive": "^8.1.0",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
-    "styled-components": "^5.1.1"
+    "styled-components": "^5.1.1",
+    "terser-webpack-plugin": "^4.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",

@@ -12,7 +12,7 @@ const TYPES = {
 }
 
 const initialState = {
-  requiredStats: 'Players',
+  requiredStats: 'Teams',
   sortBy: 'OnBasePlusSlugging',
   groupBy: 'Hitting',
   season: format(new Date(), 'yyyy'),

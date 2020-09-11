@@ -6,6 +6,7 @@ import getTeamsSeasonStats from 'Services/getTeamsSeasonStats'
 
 export default function useStats() {
   const [stats, setStats] = useState([])
+  const [loading, setLoading] = useState(false)
   const { filters } = useStatsFilters()
   const { sortBy, requiredStats, season } = filters
   const userStats = stats[requiredStats]
@@ -34,11 +35,18 @@ export default function useStats() {
 
   useEffect(() => {
     if (!userStats) {
+      setLoading(true)
       requiredStats === 'Teams'
-        ? getTeamsSeasonStats(season).then(sortStats).then(setState)
-        : getPlayerSeasonStats(season).then(sortStats).then(setState)
+        ? getTeamsSeasonStats(season)
+            .then(sortStats)
+            .then(setState)
+            .then(() => setLoading(false))
+        : getPlayerSeasonStats(season)
+            .then(sortStats)
+            .then(setState)
+            .then(() => setLoading(false))
     }
   }, [season, requiredStats])
 
-  return userStats || []
+  return { stats: userStats || [], loading }
 }

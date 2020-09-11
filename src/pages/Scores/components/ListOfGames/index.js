@@ -13,12 +13,12 @@ export default function ({ date }) {
   const teamsStanding = useTeamsStanding({ season })
   const { schedulesGames, loading, error } = useGames(date)
 
-  // useLiveGames()
+  useLiveGames()
 
   if (loading) {
     return <div>Loading...</div>
   }
-  if (error) return <div>Error Cñ</div>
+  if (error) return <div>Error, Recarga la página 😕</div>
 
   return (
     <Container>

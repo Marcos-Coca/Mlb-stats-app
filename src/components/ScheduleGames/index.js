@@ -13,7 +13,7 @@ export default function ({ date }) {
   if (loading) {
     return <div>Loading...</div>
   }
-  if (error) return <div>Error Cñ</div>
+  if (error) return <div>Error, Recarga la página 😕</div>
 
   return (
     <List>
