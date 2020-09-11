@@ -11,7 +11,6 @@ export default function ({ date, setDate }) {
     <Header>
       <Titles>
         <h1 className="active">Scores</h1>
-        <h1>Schedule</h1>
       </Titles>
       <Date>
         <Dates date={date} setDate={setDate} requiredDates={isMobile ? 2 : 6} />
