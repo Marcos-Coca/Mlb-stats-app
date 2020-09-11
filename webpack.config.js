@@ -8,11 +8,14 @@ module.exports = {
   },
   mode: 'production',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'js/[name].js',
     publicPath: '/',
   },
 
+  devServer: {
+    historyApiFallback: true,
+  },
   resolve: {
     alias: {
       Components: path.resolve(__dirname, 'src/components'),

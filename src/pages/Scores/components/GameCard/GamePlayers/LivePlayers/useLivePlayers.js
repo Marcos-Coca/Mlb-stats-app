@@ -7,13 +7,19 @@ export default function useLivePlayers({ game }) {
   const season = game.Season
   const date = format(new Date(game.Day), 'yyyy-MMM-dd')
 
-  const [currentHitter] = usePlayer({ season, playerID: game.CurrentHitterID })
+  const [currentHitter = {}] = usePlayer({
+    season,
+    playerID: game.CurrentHitterID,
+  })
   const currentHitterStats = usePlayerGameStats({
     playerID: game.CurrentHitterID,
     date,
   })
 
-  const [pitcherHitter] = usePlayer({ season, playerID: game.CurrentPitcherID })
+  const [pitcherHitter = {}] = usePlayer({
+    season,
+    playerID: game.CurrentPitcherID,
+  })
   const pitcherHitterStats = usePlayerGameStats({
     playerID: game.CurrentPitcherID,
     date,
